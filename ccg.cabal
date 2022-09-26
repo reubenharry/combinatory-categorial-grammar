@@ -1,0 +1,66 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           ccg
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/ccg#readme>
+homepage:       https://github.com/githubuser/ccg#readme
+bug-reports:    https://github.com/githubuser/ccg/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/ccg
+
+library
+  exposed-modules:
+      CG
+      CGFeatures
+      CGTyped
+      CGDependent
+      CGDependentFancy
+      ExampleLexicon
+      ChessLexicon
+      ReludeExample
+  hs-source-dirs:
+      src
+  default-extensions:
+      OverloadedStrings
+      TypeApplications
+      LambdaCase
+      RankNTypes
+      FlexibleContexts
+      PatternSynonyms
+      -- NoImplicitPrelude
+  build-depends:
+      base >=4.7 && <5
+    , data-fix
+    , free
+    , logict
+    , megaparsec
+    , mtl
+    , recursion-schemes
+    , text
+    , singletons
+    , singletons-th
+    , functor-combinators
+    , mmorph
+    -- , linear-base
+    -- , linear-smc
+    , relude
+    -- , HList
+  default-language: Haskell2010
+  mixins:   base hiding (Prelude)
+          , relude (Relude as Prelude)
+          , relude
